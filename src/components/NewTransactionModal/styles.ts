@@ -57,7 +57,8 @@ interface RadioBoxProps {
     isActive: boolean;
     activeColor: 'green' | 'red';
 }
-
+// Javascript não reconhecer variáves css (ex. --red: #E52E4D), por isso é
+//necessário criar uma váriavel com as cores para ser usada na interpolação ${}.
 const colors = {
     green: '#33CC95',
     red: '#E52E4D',

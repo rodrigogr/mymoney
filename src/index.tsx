@@ -34,7 +34,6 @@ createServer({
       ],
     })
 },
-
     routes(){
       this.namespace = 'api';
       this.get('/transactions', () => {
@@ -45,9 +44,9 @@ createServer({
         const data = JSON.parse(request.requestBody)
         //schema é o banco de dados
         //create é o método que persiste no banco
+        return schema.create('transaction', data) 
         //1º parâmetro: model que está inserindo
         //2º parâmetro: dados que quero passar
-        return schema.create('transaction', data) 
       })
     }
 })
